@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pemesanan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f8fa; 
+    color: #333;
+}
+
+.order-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-container h1 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.order-form-container label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.order-form-container input[type="text"],
+.order-form-container input[type="email"],
+.order-form-container textarea,
+.order-form-container select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.order-form-container input:focus,
+.order-form-container textarea:focus,
+.order-form-container select:focus {
+    border-color: #177abd;
+    outline: none;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 6px rgba(23, 122, 189, 0.3);
+}
+
+.order-form-container textarea {
+    height: 100px;
+    resize: none;
+}
+
+.order-form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #bd1717;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-form-container button:hover {
+    background-color: #155a92;
+    transform: translateY(-2px);
+}
+
+.order-form-container button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+.order-form-container {
+        padding: 20px;
+}
+
+.order-form-container h1 {
+        font-size: 22px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="order-form-container">
+        <h1>Form Pemesanan</h1>
+        <form action="/submit-order" method="post">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+            <label for="address">Alamat:</label>
+            <textarea id="address" name="address" placeholder="Masukkan alamat Anda" required></textarea>
+
+            <label for="size">Ukuran Sepatu:</label>
+            <select id="size" name="size" required>
+                <option value="" disabled selected>Pilih ukuran</option>
+                <option value="28">28</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="43">43</option>
+            </select>
+
+            <button type="submit">Pesan Sekarang</button>
+        </form>
+    </div>
+</body>
+</html>
